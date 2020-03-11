@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,7 +14,7 @@
 		DD3946A72418B80C0008A146 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD3946A52418B80C0008A146 /* Main.storyboard */; };
 		DD3946A92418B80E0008A146 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD3946A82418B80E0008A146 /* Assets.xcassets */; };
 		DD3946AC2418B80E0008A146 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD3946AA2418B80E0008A146 /* LaunchScreen.storyboard */; };
-		DD3946B42418B9AF0008A146 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD3946B32418B9AF0008A146 /* GoogleService-Info.plist */; };
+		DD3946BA2418C1030008A146 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD3946B92418C1030008A146 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,7 @@
 		DD3946A82418B80E0008A146 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD3946AB2418B80E0008A146 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD3946AD2418B80E0008A146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DD3946B32418B9AF0008A146 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DD3946B92418C1030008A146 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E0EBB7CD781D9C68ADAB6BEB /* Pods-TestBitrise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestBitrise.release.xcconfig"; path = "Target Support Files/Pods-TestBitrise/Pods-TestBitrise.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,7 +58,6 @@
 				CA77E2AD33CC396AF3DEF492 /* Pods-TestBitrise.debug.xcconfig */,
 				E0EBB7CD781D9C68ADAB6BEB /* Pods-TestBitrise.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -86,10 +85,10 @@
 				DD39469F2418B80C0008A146 /* AppDelegate.swift */,
 				DD3946A12418B80C0008A146 /* SceneDelegate.swift */,
 				DD3946A32418B80C0008A146 /* ViewController.swift */,
-				DD3946B32418B9AF0008A146 /* GoogleService-Info.plist */,
 				DD3946A52418B80C0008A146 /* Main.storyboard */,
 				DD3946A82418B80E0008A146 /* Assets.xcassets */,
 				DD3946AA2418B80E0008A146 /* LaunchScreen.storyboard */,
+				DD3946B92418C1030008A146 /* GoogleService-Info.plist */,
 				DD3946AD2418B80E0008A146 /* Info.plist */,
 			);
 			path = TestBitrise;
@@ -107,7 +106,9 @@
 				DD3946992418B80C0008A146 /* Frameworks */,
 				DD39469A2418B80C0008A146 /* Resources */,
 				A3D307F6171A54D2660539BD /* [CP] Embed Pods Frameworks */,
+				DD3946B52418BCEB0008A146 /* ShellScript */,
 				D8CFD0FD658BCF69F10A1719 /* [CP] Copy Pods Resources */,
+				DD3946B62418C0230008A146 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -157,7 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD3946AC2418B80E0008A146 /* LaunchScreen.storyboard in Resources */,
-				DD3946B42418B9AF0008A146 /* GoogleService-Info.plist in Resources */,
+				DD3946BA2418C1030008A146 /* GoogleService-Info.plist in Resources */,
 				DD3946A92418B80E0008A146 /* Assets.xcassets in Resources */,
 				DD3946A72418B80C0008A146 /* Main.storyboard in Resources */,
 			);
@@ -221,6 +222,40 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestBitrise/Pods-TestBitrise-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		DD3946B52418BCEB0008A146 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n";
+		};
+		DD3946B62418C0230008A146 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/upload-symbols\" -gsp \"${PROJECT_DIR}/TestBitrise/GoogleService-Info.plist\" -p ios \"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -377,6 +412,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = TestBitrise/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -395,6 +431,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = TestBitrise/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
